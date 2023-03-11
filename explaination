@@ -1,0 +1,20 @@
+For this task, you need some knowledge of HTML and the requests and BeautifulSoup libraries in Python.
+If you have never used the BeautifulSoup library before, use the command mentioned below in your command prompt or terminal to install this library in your Python virtual environment:
+(pip install beautifulsoup4)
+Here's how the script works:
+
+It first imports the requests and BeautifulSoup libraries.
+
+It assigns the Github profile URL to the github_profile variable.
+
+It uses the requests.get() function to send a GET request to the Github profile URL and stores the response in the req variable.
+
+It creates a BeautifulSoup object named scraper by parsing the HTML content of the response, which is accessed through the req.content attribute.
+
+It uses the find() method of the scraper object to find the first img tag with an alt attribute that equals "Avatar".
+
+It accesses the value of the src attribute of the img tag found in the previous step and stores it in the profile_picture variable.
+
+Finally, it prints the value of the profile_picture variable.
+
+Assuming that the Github profile URL provided in the github_profile variable is valid and the profile page contains an img tag with an alt attribute that equals "Avatar", the script should print the URL of the profile picture.
